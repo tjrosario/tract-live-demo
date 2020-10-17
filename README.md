@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This is the proof of concept (POC) for the Tract Live! application.  Built with [React v16](https://reactjs.org/), [Chakra](https://chakra-ui.com/) and [Stream Chat](https://getstream.io/chat/).  
 
 ## Available Scripts
 
