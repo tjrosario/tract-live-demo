@@ -9,6 +9,9 @@ import {
 } from './TractLiveContext';
 import YouTubePlayer from '../../components/YouTubePlayer';
 
+/**
+ * Tract Live! video player component
+ */
 const TractLiveVideoPlayer: React.FC = (): JSX.Element => {
     const {
         tractLiveEvent: {

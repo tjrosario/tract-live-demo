@@ -16,9 +16,9 @@ export interface IDescription {
 
 export interface IEventMetaData {
   description: IDescription[];
-  end_time: Date | string;
+  end_time: number | string;
   host: Partial<IUser>;
-  start_time: Date | string;
+  start_time: number | string;
   title: string;
 }
 

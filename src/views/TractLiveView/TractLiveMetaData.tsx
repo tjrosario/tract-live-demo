@@ -1,4 +1,5 @@
 import React, {
+    ReactText,
     useContext 
 } from 'react';
 import {
@@ -10,6 +11,13 @@ import {
 import {
     IDescription 
 } from '../../common/types';
+
+// Quick n dirty timestamp
+const timestamp = (epoch: ReactText) => new Date(epoch).toLocaleTimeString('en-US', {
+    hour: '2-digit',
+    minute:'2-digit',
+    timeZoneName: 'short'
+})
 
 /**
  * Tract Live! meta data component 
@@ -44,21 +52,29 @@ const TractLiveMetaData: React.FC = (): JSX.Element => {
                     marginBottom={5}
                     paddingY={{
                         md: 5,
-                        sm: 3
+                        xs: 3
                     }}
                 >
                     <Box flexGrow={1}
                         marginBottom={{
-                            sm: 3 
+                            xs: 3 
                         }}>
                         <Heading as={"h2"}
                             marginBottom={{
-                                sm: 1 
+                                xs: 1 
                             }}
                             size={"md"}>
                             {tractLiveEvent.metadata?.title}
                         </Heading>
-                        <Text as={"p"}>Hosted by {tractLiveEvent.metadata?.host?.name}</Text>
+                        <Text as={"p"}
+                            color={"gray.600"}
+                            fontSize={"sm"}
+                            fontWeight={"bold"}>Hosted by {tractLiveEvent.metadata?.host?.name} 
+                            <Text as={'span'}>
+                                &nbsp;&bull;&nbsp;
+                                {timestamp(tractLiveEvent?.metadata?.start_time)} - {timestamp(tractLiveEvent?.metadata?.end_time)}
+                            </Text>
+                        </Text>
                     </Box>
 
                     <Stack isInline

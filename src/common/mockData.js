@@ -49,13 +49,13 @@ export const STUB = {
             'Bacon ipsum dolor amet sirloin sausage tongue meatloaf, chicken burgdoggen ham hock cow strip steak shank short ribs hamburger.'
                 }
             ],
-            end_time: '',
+            end_time: 1602973800000,
             host: {
                 image:
           'https://cdn.costumewall.com/wp-content/uploads/2017/06/charlie-brown.jpg',
                 name: 'Charlie Brown'
             },
-            start_time: '',
+            start_time: 1602970200000,
             title: 'Learn how to be come the next great food critic!'
         },
         video: {
