@@ -31,6 +31,10 @@ const chatClient = new StreamChat(
 );
 const userToken = process.env.REACT_APP_STREAM_CHAT_USER_TOKEN || '';
 
+/**
+ * Chat stream component that uses Stream Chat
+ * https://getstream.io/chat/
+ */
 const ChatStream: React.FC<IChatStream> = ({
     event, user 
 }) => {

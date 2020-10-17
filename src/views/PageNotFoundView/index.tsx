@@ -3,6 +3,9 @@ import {
     Box, Heading, Text 
 } from '@chakra-ui/core';
 
+/**
+ * Page not found (404) view
+ */
 const PageNotFoundView: React.FC = (): JSX.Element => {
     return (
         <Box>

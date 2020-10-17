@@ -14,6 +14,10 @@ import {
     STUB 
 } from '../../common/mockData';
 
+/**
+ * Tract Live! main component grid that houses video player, meta data 
+ * and chat stream
+ */
 const TractLiveMain: React.FC = (): JSX.Element => {
     const {
         setEvent, setUser , tractLiveEvent, user 

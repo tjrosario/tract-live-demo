@@ -16,6 +16,9 @@ interface IContainer {
   children: ReactNode;
 }
 
+/**
+ * Container component that center aligns all children
+ */
 const Container: React.FC<IContainer> = ({
     children 
 }): JSX.Element => {
@@ -30,6 +33,9 @@ const Container: React.FC<IContainer> = ({
     );
 };
 
+/**
+ * Main app component that includes theming and routing
+ */
 const App: React.FC = (): JSX.Element => {
     return (
         <ThemeProvider theme={customTheme}>

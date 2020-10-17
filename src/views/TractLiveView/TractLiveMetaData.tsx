@@ -11,6 +11,9 @@ import {
     IDescription 
 } from '../../common/types';
 
+/**
+ * Tract Live! meta data component 
+ */
 const TractLiveMetaData: React.FC = (): JSX.Element => {
     const {
         tractLiveEvent 

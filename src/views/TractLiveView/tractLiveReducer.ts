@@ -10,6 +10,9 @@ type State = {
   user: IUser;
 };
 
+/**
+ * Main app reducer
+ */
 const tractLiveReducer = (state: State, action: TractLiveActions): State => {
     switch (action.type) {
         case Types.SET_EVENT:

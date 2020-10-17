@@ -11,6 +11,9 @@ interface IYouTubePlayer {
   title?: string;
 }
 
+/**
+ * YouTube player component
+ */
 const YouTubePlayer: React.FC<IYouTubePlayer> = ({
     allow,
     allowFullScreen,

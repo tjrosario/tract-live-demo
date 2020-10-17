@@ -34,6 +34,9 @@ export const TractLiveContext = createContext<ITractLiveContextProps>(
     initialState
 );
 
+/**
+ * Main app context provider 
+ */
 export const TractLiveProvider: React.FC<ITractLiveProviderProps> = ({
     children
 }): JSX.Element => {

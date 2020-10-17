@@ -4,6 +4,9 @@ import {
 } from './TractLiveContext';
 import TractLiveMain from './TractLiveMain';
 
+/**
+ * Tract Live! view
+ */
 const TractLiveView: React.FC = (): JSX.Element => {
     return (
         <TractLiveProvider>

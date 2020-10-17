@@ -9,6 +9,9 @@ import {
     TractLiveContext 
 } from './TractLiveContext';
 
+/**
+ * Tract Live! chat stream component
+ */
 const TractLiveChatStream: React.FC = (): JSX.Element => {
     const {
         tractLiveEvent, user 
