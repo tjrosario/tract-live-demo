@@ -1,4 +1,3 @@
-## Description
 ![Tract Logo](https://i.ibb.co/yYwtRQG/image.png)
 
 This is the proof of concept (POC) for the Tract Live! application.  Built with [React v16](https://reactjs.org/), [Chakra](https://chakra-ui.com/) and [Stream Chat](https://getstream.io/chat/).  
