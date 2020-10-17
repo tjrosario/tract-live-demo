@@ -9,9 +9,9 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
-    'plugin:prettier/recommended',
   ],
-  plugins: ['@typescript-eslint', 'prettier', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'react', 'react-hooks', 
+  "sort-destructure-keys"],
   env: {
     browser: true,
     es6: true,
@@ -31,77 +31,155 @@ module.exports = {
     tsconfigRootDir: __dirname
   },
   rules: {
-    'compat/compat': 1,
-    'prettier/prettier': [
-      'error',
+    "comma-dangle": ["error", "never"],
+    "sort-destructure-keys/sort-destructure-keys": [
+      2,
       {
-        useTabs: true,
-        printWidth: 80,
-        tabWidth: 4,
-        singleQuote: true,
-        trailingComma: 'es5',
-        jsxBracketSameLine: false,
-        semi: false,
-      },
+        "caseSensitive": false
+      }
     ],
-    'no-var': 2,
-    'no-const-assign': 'error',
-    radix: 'error',
-    'prefer-template': 'error',
-    'prefer-const': 'error',
-    'prefer-spread': 'error',
-    eqeqeq: ['error', 'always'],
-    semi: [2, 'never'],
-    'default-case': 2,
-    'template-curly-spacing': 0, // Prettier.
-    'arrow-parens': 0, // Does not work with Flow generic types
-    'consistent-return': 0, // Flow.
-    // Prefer new line before return
-    // http://eslint.org/docs/rules/newline-before-return
-    'newline-before-return': 'error',
-    "no-use-before-define": 'warn',
-    "@typescript-eslint/no-use-before-define": "off",
-    'import/no-extraneous-dependencies': 0,
-    'import/extensions': 0,
-    'import/no-unresolved': 0,
-    'no-return-await': 0,
-    'no-restricted-syntax': 0,
-    'no-underscore-dangle': 0,
-    'import/first': 0,
-    'no-restricted-globals': 1,
-    'no-useless-escape': 1,
-    //was not working when used with flow prop types
-    'no-unused-vars': 1,
-    'react/no-unused-prop-types': 1,
-    // require or disallow Yoda conditions
-    // https://eslint.org/docs/rules/yoda
-    yoda: ['error', 'never', { exceptRange: true }],
-    // Require modules with a single export to use a default export
-    // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-    'import/prefer-default-export': 0,
-
-    // no longer defined
-    'jsx-a11y/href-no-hash': 'off',
-
-    'global-require': 0, // Used by webpack isomorphic tools and React Native.
-    'no-console': 0, // we are enabling this in the scripts
-    'no-debugger': 0, // we are enabling this in the scripts
-    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    quotes: ['error', 'single', { avoidEscape: true }],
-    // React control override.
-    'react/display-name': 0,
-    'react/forbid-prop-types': 0, // using Flow types.
-    'react/jsx-closing-bracket-location': 0, // Prettier.
-    'react/jsx-filename-extension': 0, // JSX belongs to .js files.
-    'react/jsx-indent': 0, // Prettier.
-    'react/jsx-indent-props': 0, // Prettier.
-    'react/jsx-wrap-multilines': 0, // Prettier.
-    'react/no-danger': 0, // Control freaky.
-    'react/no-unescaped-entities': 0, // Prettier.
-    'react/no-unused-prop-types': 0, // Flow.
-    'react/prop-types': 0, // Flow.
-    'react/require-default-props': 0, // Flow.
-    'react/jsx-no-bind': 2,
-    'react/prefer-stateless-function': [2, { ignorePureComponents: true }],
-  },
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": true
+      }
+    ],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      0
+    ],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      {
+        "exceptAfterSingleLine": true
+      }
+    ],
+    "max-len": [
+      0
+    ],
+    "no-console": [
+      "error"
+    ],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-underscore-dangle": [
+      0
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "minProperties": 1
+      }
+    ],
+    "object-curly-spacing": [
+      "error", "always"
+    ],
+    "object-property-newline": [
+      "error",
+      {
+        "allowMultiplePropertiesPerLine": false
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "children": "ignore",
+        "props": "always"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-indent": [
+      "error",
+      4
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      4
+    ],
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "maximum": 1
+      }
+    ],
+    "react/jsx-one-expression-per-line": [
+      0
+    ],
+    "react/jsx-props-no-spreading": [
+      0
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/no-did-update-set-state": [
+      0
+    ],
+    "react/no-unescaped-entities": [
+      0
+    ],
+    'react/prop-types': 0,
+    "sort-destructure-keys/sort-destructure-keys": [
+      2,
+      {
+        "caseSensitive": false
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreDeclarationSort": true
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": true
+      }
+    ],
+    '@typescript-eslint/no-explicit-any': 0
+  }
 };
