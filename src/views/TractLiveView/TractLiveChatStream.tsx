@@ -16,7 +16,7 @@ const TractLiveChatStream: React.FC = (): JSX.Element => {
 
     return (
         <Box as={"section"}>
-            {user.id !== '' ? (
+            {user.id ? (
                 <ChatStream event={tractLiveEvent}
                     user={user} />
             ) : null}
